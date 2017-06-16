@@ -1,0 +1,116 @@
+//
+//  pugongyingPrefix.pch
+//  pugongying
+//
+//  Created by wyy on 16/2/23.
+//  Copyright © 2016年 WYY. All rights reserved.
+//
+
+#ifndef pugongyingPrefix_pch
+#define pugongyingPrefix_pch
+
+#import "YYPugongyingTool.h"
+#import "UIView+Extension.h"
+
+#import "YYUserTool.h"
+//下拉刷新
+#import "MJRefresh.h"
+#import "NSObject+YYNet.h"
+#import "BlocksKit+UIKit.h"
+
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD+CZ.h"
+#import "FMDB.h"
+#import "Masonry.h"
+
+#import "Reachability.h"
+
+#import "YYNoNetViewBtn.h"
+#import "YYLoadingView.h"
+#import "YYMainDataTool.h"
+
+/**
+ *  网址
+ */
+#define YYHTTPSelectGET @"http://app.pgy198.com/php/get.php"
+#define YYHTTPInsertPOST @"http://app.pgy198.com/php/post.php"
+//#define YYHTTPSelectGET @"http://www.zhangxingao.com/dandelion/App/php/get.php"
+//#define YYHTTPInsertPOST @"http://www.zhangxingao.com/dandelion/App/php/post.php"
+
+#define YYUserID @"YYUserID"
+#define YYUpDateUserMessage @"YYUpDateUserMessage"
+/**
+ *  课程分类模型的数组所在路径在用户配置文件中的键
+ */
+#define YYCourseCategoryArrayPath @"YYCourseCategoryArrayPath"
+/**
+ *  资讯分类模型的数组所在路径在用户配置文件中的键
+ */
+#define YYNewsCategoryArrayPath @"YYNewsCategoryArrayPath"
+/**
+ *  义诊分类模型的数组所在路径在用户配置文件中的键
+ */
+#define YYClinicCategoryArrayPath @"YYClinicCategoryArrayPath"
+//网络状态
+#define YYNetworkState @"YYNetworkState"
+/**
+ *  判断是否提交了义诊,yes提交过还没进我的义诊或者清空过数据，no没有新的义诊
+ */
+#define YYUpdateYizhen @"YYUpdateYizhen"
+/**
+ *  判断是否是第一次加载界面
+ */
+#define YYFirstNews @"YYFirstNews"      //资讯
+#define YYFirstStory @"YYFirstStory"    //创业故事
+#define YYFirstCourse @"YYFirstCourse"  //课程
+/**
+ *  是否签到,已签到,未签到
+ */
+#define YYSignInToday @"YYSignInToday"
+/**
+ *  当前有进度的义诊进度
+ */
+#define YYCurrentClinicProgress @"YYCurrentClinicProgress"
+
+
+/**
+ *  我的中的通知
+ */
+#define YYUserLogoutApp @"YYUserLogoutApp"                              //退出登录通知
+#define YYUserChangeName @"YYUserChangeName"                            //修改用户名通知
+#define YYUserLoginApp @"YYUserLoginApp"                                //登录通知
+#define YYUserHeaderImageChange @"YYUserHeaderImageChange"              //头像修改通知
+
+
+#define YYWidthScreen [UIScreen mainScreen].bounds.size.width
+#define YYHeightScreen [UIScreen mainScreen].bounds.size.height
+#define YY18WidthMargin 18/375.0*[UIScreen mainScreen].bounds.size.width
+#define YY12WidthMargin 12/375.0*[UIScreen mainScreen].bounds.size.width
+
+#define YY10HeightMargin 10/667.0*[UIScreen mainScreen].bounds.size.height
+#define YY12HeightMargin 12/667.0*[UIScreen mainScreen].bounds.size.height
+#define YY16HeightMargin 16/667.0*[UIScreen mainScreen].bounds.size.height
+
+
+#define YYGrayLineColor [UIColor colorWithRed:203/255.0 green:202/255.0 blue:201/255.0 alpha:1.0]
+#define YYGrayTextColor [UIColor colorWithRed:86/255.0 green:86/255.0 blue:86/255.0 alpha:1.0]
+#define YYGrayText140Color [UIColor colorWithRed:140/255.0 green:140/255.0 blue:140/255.0 alpha:1.0]
+#define YYGrayBGColor [UIColor colorWithRed:235/255.0 green:235/255.0 blue:241/255.0 alpha:1.0]
+
+#define YYBlueTextColor [UIColor colorWithRed:50/255.0 green:150/255.0 blue:190/255.0 alpha:1.0]
+//#define YYBlueTextColor [UIColor colorWithRed:10/255.0 green:21/255.0 blue:72/255.0 alpha:1]
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+
+#define YYLog(...) NSLog(@"%s\n %@\n\n",__func__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+
+#define YYLog(...)
+
+#endif
+
+
+
+#endif /* pugongyingPrefix_pch */
